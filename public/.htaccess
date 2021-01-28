@@ -1,0 +1,10 @@
+Options -MultiViews
+RewriteEngine On
+
+RewriteBase /public
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+
+RewriteRule ^(.+)$ biblioteka.php/$1 [QSA,L]
